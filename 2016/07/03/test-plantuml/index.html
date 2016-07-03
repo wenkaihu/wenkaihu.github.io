@@ -84,37 +84,56 @@
 
 
 
-<meta name="description" content="Use Gravizo">
+<meta name="description" content="Use GravizoplantUML
+Graphviz dot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test plantuml">
 <meta property="og:url" content="http://yoursite.com/2016/07/03/test-plantuml/index.html">
 <meta property="og:site_name" content="wenkaihu's blog">
-<meta property="og:description" content="Use Gravizo">
+<meta property="og:description" content="Use GravizoplantUML
+Graphviz dot">
 <meta property="og:image" content="http://g.gravizo.com/g?
 @startuml;
-hide footbox;
-participant Client as c;
-participant Server as s;
-c -> s: SYN;
-s -> c: SYN ACK;
-c -> s: ACK;
-c -> s: Request;
-s -> c: Response;
+  hide footbox;
+  participant Client as c;
+  participant Server as s;
+  c -> s: SYN;
+  s -> c: SYN ACK;
+  c -> s: ACK;
+  c -> s: Request;
+  s -> c: Response;
 @enduml">
-<meta property="og:updated_time" content="2016-07-03T06:29:12.627Z">
+<meta property="og:image" content="http://g.gravizo.com/g?
+digraph G {
+    aize="4,4";
+    main [shape=box];
+    main -> parse [weight=8];
+    parse -> execute;
+    main -> init [style=dotted];
+    main -> cleanup;
+    execute -> { make_string; printf}
+    init -> make_string;
+    edge [color=red];
+    main -> printf [style=bold,label="100 times"];
+    make_string [label="make a string"];
+    node [shape=box,style=filled,color=".7 .3 1.0"];
+    execute -> compare;
+}">
+<meta property="og:updated_time" content="2016-07-03T11:38:05.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test plantuml">
-<meta name="twitter:description" content="Use Gravizo">
+<meta name="twitter:description" content="Use GravizoplantUML
+Graphviz dot">
 <meta name="twitter:image" content="http://g.gravizo.com/g?
 @startuml;
-hide footbox;
-participant Client as c;
-participant Server as s;
-c -> s: SYN;
-s -> c: SYN ACK;
-c -> s: ACK;
-c -> s: Request;
-s -> c: Response;
+  hide footbox;
+  participant Client as c;
+  participant Server as s;
+  c -> s: SYN;
+  s -> c: SYN ACK;
+  c -> s: ACK;
+  c -> s: Request;
+  s -> c: Response;
 @enduml">
 
 
@@ -374,17 +393,33 @@ s -> c: Response;
       
 
       
-        <h3 id="Use-Gravizo"><a href="#Use-Gravizo" class="headerlink" title="Use Gravizo"></a>Use Gravizo</h3><p><img src="http://g.gravizo.com/g?
+        <h3 id="Use-Gravizo"><a href="#Use-Gravizo" class="headerlink" title="Use Gravizo"></a>Use Gravizo</h3><h4 id="plantUML"><a href="#plantUML" class="headerlink" title="plantUML"></a>plantUML</h4><p><img src="http://g.gravizo.com/g?
 @startuml;
-hide footbox;
-participant Client as c;
-participant Server as s;
-c -&gt; s: SYN;
-s -&gt; c: SYN ACK;
-c -&gt; s: ACK;
-c -&gt; s: Request;
-s -&gt; c: Response;
+  hide footbox;
+  participant Client as c;
+  participant Server as s;
+  c -&gt; s: SYN;
+  s -&gt; c: SYN ACK;
+  c -&gt; s: ACK;
+  c -&gt; s: Request;
+  s -&gt; c: Response;
 @enduml" alt=""></p>
+<h4 id="Graphviz-dot"><a href="#Graphviz-dot" class="headerlink" title="Graphviz dot"></a>Graphviz dot</h4><p><a href="#"><img src="http://g.gravizo.com/g?
+digraph G {
+    aize=&quot;4,4&quot;;
+    main [shape=box];
+    main -> parse [weight=8];
+    parse -> execute;
+    main -> init [style=dotted];
+    main -> cleanup;
+    execute -> { make_string; printf}
+    init -> make_string;
+    edge [color=red];
+    main -> printf [style=bold,label=&quot;100 times&quot;];
+    make_string [label=&quot;make a string&quot;];
+    node [shape=box,style=filled,color=&quot;.7 .3 1.0&quot;];
+    execute -> compare;
+}"></a></p>
 
       
     </div>
@@ -532,7 +567,7 @@ s -&gt; c: Response;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-Gravizo"><span class="nav-number">1.</span> <span class="nav-text">Use Gravizo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-Gravizo"><span class="nav-number">1.</span> <span class="nav-text">Use Gravizo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#plantUML"><span class="nav-number">1.1.</span> <span class="nav-text">plantUML</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Graphviz-dot"><span class="nav-number">1.2.</span> <span class="nav-text">Graphviz dot</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

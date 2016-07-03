@@ -355,17 +355,33 @@
       
         
           
-            <h3 id="Use-Gravizo"><a href="#Use-Gravizo" class="headerlink" title="Use Gravizo"></a>Use Gravizo</h3><p><img src="http://g.gravizo.com/g?
+            <h3 id="Use-Gravizo"><a href="#Use-Gravizo" class="headerlink" title="Use Gravizo"></a>Use Gravizo</h3><h4 id="plantUML"><a href="#plantUML" class="headerlink" title="plantUML"></a>plantUML</h4><p><img src="http://g.gravizo.com/g?
 @startuml;
-hide footbox;
-participant Client as c;
-participant Server as s;
-c -&gt; s: SYN;
-s -&gt; c: SYN ACK;
-c -&gt; s: ACK;
-c -&gt; s: Request;
-s -&gt; c: Response;
+  hide footbox;
+  participant Client as c;
+  participant Server as s;
+  c -&gt; s: SYN;
+  s -&gt; c: SYN ACK;
+  c -&gt; s: ACK;
+  c -&gt; s: Request;
+  s -&gt; c: Response;
 @enduml" alt=""></p>
+<h4 id="Graphviz-dot"><a href="#Graphviz-dot" class="headerlink" title="Graphviz dot"></a>Graphviz dot</h4><p><a href="#"><img src="http://g.gravizo.com/g?
+digraph G {
+    aize=&quot;4,4&quot;;
+    main [shape=box];
+    main -> parse [weight=8];
+    parse -> execute;
+    main -> init [style=dotted];
+    main -> cleanup;
+    execute -> { make_string; printf}
+    init -> make_string;
+    edge [color=red];
+    main -> printf [style=bold,label=&quot;100 times&quot;];
+    make_string [label=&quot;make a string&quot;];
+    node [shape=box,style=filled,color=&quot;.7 .3 1.0&quot;];
+    execute -> compare;
+}"></a></p>
 
           
         
